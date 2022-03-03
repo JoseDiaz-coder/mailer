@@ -1,18 +1,22 @@
 <!doctype html>
-<html>
+<html >
 <title>{% block title %}{% endblock %} - Mailer</title>
 <link rel="stylesheet" href= "{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,600&display=swap" rel="stylesheet"/>
+<style>
+
+</style>
 <nav>
   Mail<b>er</b>
 </nav>
 <section class="content">
   <div class="top-bar">
-    <form method='get'>
-      <input name ="search" type='text', placeholder="Search"/>
+    <form method="get">
+      <input name="search" type='text', placeholder="Search"/>
     </form>
+    {% block action %}{% endblock %}
   </div>
   <header>
     {% block header %}{% endblock %}

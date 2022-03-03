@@ -2,6 +2,10 @@
 {% block header%}
 <h1>{% block title %}Correos enviados{% endblock %}</h1>
 {% endblock %}
+
+{% block action %}
+<a class="button" href='{{ url_for('mail.create') }}'>Nuevo correo</a>
+{% endblock %}
 {% block content %}
 <ul>
 {% for mail in mails %}
